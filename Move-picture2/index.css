@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+html, body{
+    width:100%;
+    height:100%;
+    background:#999; 
+}
+.wraper{
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%,-50%);
+    width: 70%;
+    height: 70%;
+
+}
+.inner{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    transition: transform 1s linear;
+    overflow: hidden;
+    /* align-items: center; */
+}
+.every{
+    width: 16%;
+    height: 100%;
+    border-radius: 20px;
+    background:skyblue;
+    transition: transform 0.5s linear;
+    transition: width 0.3s linear 0.2s,height 0.3s linear;
+}
+.active{
+    width: 100%;
+}
+.init2 .every:not(.active){
+    width: 0;
+    height: 0;
+}
+.init .inner .every{
+    transform: translate3d(0,100%,0);
+}
+.every:nth-of-type(2){
+    transition-delay: 0.1s;
+}
+.every:nth-of-type(3){
+    transition-delay: 0.2s;
+}
+.every:nth-of-type(4){
+    transition-delay: 0.3s;
+}
+.every:nth-of-type(5){
+    transition-delay: 0.4s;
+}
+.every:nth-of-type(6){
+    transition-delay: 0.5s;
+}
+
+.bg{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    opacity: 0.8;
+}
+
+.every:nth-of-type(1) .bg{
+    background-image: url('./img/2.jpg');
+}
+.every:nth-of-type(2) .bg{
+    background-image: url('./img/3.jpg');
+}
+.every:nth-of-type(3) .bg{
+    background-image: url('./img/4.jpg');
+}
+.every:nth-of-type(4) .bg{
+    background-image: url('./img/5.jpg');
+}
+.every:nth-of-type(5) .bg{
+    background-image: url('./img/6.jpg');
+}
+.every:nth-of-type(6) .bg{
+    background-image: url('./img/7.jpg');
+}
+.header{
+    position: relative;
+    top:10px;
+}
+.lef{
+    position: absolute;
+    left: 10px;
+}
+.rig{
+    position: absolute;
+    top:10px;
+    right: 10px;
+    width:30px;
+    height:30px;
+}
+.rig::before,
+.rig::after{
+    content: '';
+    position: absolute;
+    width:30px;
+    height:2px;
+    background: #888;
+    top:10px;
+    transform-origin: center;
+}
+.rig::before{
+    transform-origin: bottom;
+    transform: rotate(45deg);
+    
+}
+.rig::after{
+    transform: rotate(-45deg);
+    transform-origin: bottom;
+}
+.every .font{
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.bg:hover{
+    opacity: 1;
+    font-size: 25px;
+}

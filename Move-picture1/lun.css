@@ -1,0 +1,32 @@
+*{
+	margin:0;
+	padding:0;
+}
+.flash{
+	position: relative;
+	margin: 0 auto;
+	width: 1200px;
+	height: 535px;
+	display:;
+	top: 40px;
+}
+.flash a img{
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+}
+.flash ul{
+	position: absolute;
+	left: 550px;
+	bottom: 20px;
+}
+.flash ul li{
+	list-style: none;
+	width: 12px;
+	height: 12px;
+	margin-right: 8px;
+	background:black;
+	float: left;
+	border-radius: 50%;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    html,body{
+        width: 100%;
+        height: 100%;
+        background: #100000;
+    }
+    .wrap{
+        width: 300px;
+        height: 200px;
+        position: absolute;
+        left:38%;
+        top: 20%;
+        /* transform: translate(-50%,-50%); */
+        transform-style: preserve-3d;
+        transform-origin: 50% 50% 750px;
+        animation: turn 20s linear infinite;
+        
+       
+    }
+    .img{
+        width: 600px;
+        height: 400px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-position: center;
+        transform-origin: 50% 50% 750px;
+        perspective: 1000px;
+        
+    }
+    .img:nth-of-type(1){
+        background-image: url('./img/1.jpg');
+        background-size: cover;
+        transform: rotateY(45deg);
+    }
+    .img:nth-of-type(2){
+        background-image: url('./img/2.jpg');
+        background-size: cover;
+        transform: rotateY(90deg);
+    }
+    .img:nth-of-type(3){
+        background-image: url('./img/3.jpg');
+        background-size: cover;
+        transform: rotateY(135deg);
+    }
+    .img:nth-of-type(4){
+        background-image: url('./img/4.jpg');
+        background-size: cover;
+        transform: rotateY(180deg);
+    }
+    .img:nth-of-type(5){
+        background-image: url('./img/5.jpg');
+        background-size: cover;
+        transform: rotateY(225deg);
+    }
+    .img:nth-of-type(6){
+        background-image: url('./img/6.jpg');
+        background-size: cover;
+        transform: rotateY(270deg);
+    }
+    .img:nth-of-type(7){
+        background-image: url('./img/7.jpg');
+        background-size: cover;
+        transform: rotateY(315deg);
+    }
+    .img:nth-of-type(8){
+        background-image: url('./img/8.jpg');
+        background-size: cover;
+        transform: rotateY(0deg);
+    }
+    @keyframes turn{
+        0%{
+            transform:rotateX(0deg) rotateY(0deg);
+        }
+        100%{
+            transform:rotateX(0deg) rotateY(360deg);
+        }
+    }
+    .font{
+        text-align: center;
+        color: white;
+        font-size: 40px;
+    }
+    </style>
+</head>
+<body>
+    <div class="font">匆匆那年</div>
+    <div class="wrap">
+        <div class="img"></div>
+        <div class="img"></div>
+        <div class="img"></div>
+        <div class="img"></div>
+        <div class="img"></div>
+        <div class="img"></div>
+        <div class="img"></div>
+        <div class="img"></div>
+    </div>
+</body>
+</html>
